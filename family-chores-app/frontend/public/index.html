@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="theme-color" content="#FFA07A" />
+    <meta name="description" content="Mona Family OS - Manage chores, meals, wellness, and achievements for the whole family" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Family OS" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Mona Family OS</title>
+    <style>
+      /* Critical CSS for initial load */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background-color: #f9fafb;
+        -webkit-font-smoothing: antialiased;
+      }
+      #root {
+        min-height: 100vh;
+      }
+      .loading-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #FFA07A20, #87CEEB20);
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app. / U perlu aktifkan JavaScript om hierdie app te gebruik.</noscript>
+    <div id="root">
+      <div class="loading-screen">
+        <div style="text-align:center;">
+          <div style="font-size:48px;">🏠</div>
+          <p style="font-size:18px; color:#666; margin-top:8px;">Loading Family OS...</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

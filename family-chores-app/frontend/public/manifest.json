@@ -1,0 +1,9 @@
+{
+  "short_name": "Family OS",
+  "name": "Mona Family OS",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FFA07A",
+  "background_color": "#f9fafb"
+}

@@ -1,0 +1,137 @@
+/* Accessibility-specific styles */
+
+/* Font size utilities */
+.font-normal-accessible { font-size: 16px; }
+.font-large { font-size: 18px !important; }
+.font-xl { font-size: 20px !important; }
+.font-2xl-accessible { font-size: 24px !important; }
+
+/* When large font class applied, scale all children */
+.font-large * { font-size: inherit; }
+.font-xl * { font-size: inherit; }
+
+/* High contrast mode */
+.high-contrast {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.high-contrast .card,
+.high-contrast [class*="bg-"] {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast button {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #000000 !important;
+}
+
+.high-contrast a,
+.high-contrast .text-gray-500,
+.high-contrast .text-gray-600 {
+  color: #000000 !important;
+}
+
+.high-contrast .text-green-600,
+.high-contrast .text-blue-600 {
+  color: #000080 !important;
+  font-weight: bold;
+}
+
+.high-contrast .text-red-600,
+.high-contrast .text-red-500 {
+  color: #8b0000 !important;
+  font-weight: bold;
+}
+
+/* Large button mode */
+.large-button button,
+.large-button [role="button"] {
+  min-height: 56px !important;
+  min-width: 56px !important;
+  font-size: 18px !important;
+  padding: 12px 20px !important;
+}
+
+/* Touch targets - minimum 44px */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Voice feedback indicator */
+.voice-enabled-indicator {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  z-index: 9999;
+}
+
+/* Simplified UI mode */
+.simplify-ui .decorative,
+.simplify-ui .advanced-feature,
+.simplify-ui .secondary-info {
+  display: none !important;
+}
+
+.simplify-ui .card {
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+}
+
+/* Focus indicator enhancement for accessibility */
+.accessibility-focus:focus {
+  outline: 4px solid #2563eb;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.2);
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 10000;
+  font-size: 18px;
+  border-radius: 0 0 4px 0;
+  transition: top 0.1s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast preference (system level) */
+@media (prefers-contrast: high) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  button {
+    border: 2px solid currentColor;
+  }
+}
