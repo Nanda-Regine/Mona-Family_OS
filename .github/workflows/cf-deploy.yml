@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install --no-audit --no-fund --legacy-peer-deps
+      - run: npm install --no-audit --no-fund --legacy-peer-deps && npm install --no-save --legacy-peer-deps ajv@^8
       - run: npm run build
       - name: Deploy
         env:
