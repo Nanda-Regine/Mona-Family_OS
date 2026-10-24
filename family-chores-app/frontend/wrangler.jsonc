@@ -1,0 +1,8 @@
+// Mona Family OS frontend on Cloudflare Workers Static Assets (Vercel Hobby disabled, Oct 24 2026).
+{
+  "name": "mona-family-os",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": true,
+  "assets": { "directory": "build", "not_found_handling": "single-page-application" },
+  "routes": [{ "pattern": "mona.creativelynanda.co.za", "custom_domain": true }]
+}
